@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent Skills (by Anthropic) · KEEP IT · Axo Vault</title>
+<meta name="description" content="Teach your AI how you work, once: a folder with a SKILL.md that Claude loads in full only when a task needs it. Setup, cheat sheet and Axo&#x27;s verdict: keep it.">
+<meta name="theme-color" content="#2B1E16">
+<link rel="canonical" href="https://axotries.github.io/skills/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Axo Vault">
+<meta property="og:title" content="Agent Skills (by Anthropic): keep it">
+<meta property="og:description" content="Teach your AI how you work, once: a folder with a SKILL.md that Claude loads in full only when a task needs it. Setup, cheat sheet and Axo&#x27;s verdict: keep it.">
+<meta property="og:url" content="https://axotries.github.io/skills/">
+<meta property="og:image" content="https://axotries.github.io/assets/og/skills.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Axo&#x27;s verdict on Agent Skills (by Anthropic): KEEP IT">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/press-start-2p-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/vt323-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/style.css?v=97cd17d3">
+</head>
+<body class="resource">
+<div class="wrap">
+<header class="tv">
+  <div class="tv__wood"><div class="tv__plate">AXO-VISION · SKILLS</div></div>
+  <div class="tv__screen">
+    <div class="tv__picture">
+      <div class="sun" aria-hidden="true"></div><div class="ground" aria-hidden="true"></div>
+      <h1 class="tv__title">Agent Skills (by Anthropic)</h1>
+      <p class="tv__sub">Teach your AI how you work, once: a folder with a SKILL.md that Claude loads in full only when a task needs it.</p>
+      <div class="tv__stage">
+        <div class="axo"><img class="pixel" src="/assets/axo/axo_smug.png" width="64" height="77" alt="Axo, a pixel-art axolotl in an orange turtleneck, looking smug"></div>
+        <div class="stamp">KEEP IT</div>
+      </div>
+    </div>
+  </div>
+  <div class="tv__controls" aria-hidden="true"><div class="grille"></div><div class="knob"></div><div class="knob"></div><div class="chan">CH 03</div></div>
+</header>
+<main>
+<section class="get" aria-label="Get it">
+  <a class="btn btn--main" href="https://github.com/anthropics/skills" rel="noopener">Open on GitHub <span aria-hidden="true">&#8599;</span></a>
+  <p class="url">github.com/anthropics/skills</p>
+  <ul class="facts"><li><strong>19 skills in skills/</strong><span>counted at commit 8a1541c</span></li><li><strong>179K+ GitHub stars</strong><span>179,271 on 2026-10-01 15:22 UTC</span></li></ul>
+  <p class="verified">Verified Oct 1, 2026</p>
+</section>
+<section aria-labelledby="what-h"><h2 id="what-h">What it is</h2><p>A skill is a folder with a <code>SKILL.md</code>: a name, a description and your instructions. Claude only sees the name and description at first (about 100 tokens per skill) and loads the rest when a task needs it. Anthropic's official repo has 19 ready-made ones.</p></section>
+<section aria-labelledby="setup-h"><h2 id="setup-h">Setup</h2><ol class="steps"><li><p>Add Anthropic's skills to Claude Code</p><div class="cmd"><code>/plugin marketplace add anthropics/skills</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li><li><p>Install a set: the documents (PDF, Word, Excel, PowerPoint) or the examples (skill-creator included)</p><div class="cmd"><code>/plugin install document-skills@anthropic-agent-skills</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div><div class="cmd"><code>/plugin install example-skills@anthropic-agent-skills</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li><li><p>Or write your own: one folder, one file</p><div class="cmd"><code>~/.claude/skills/commit-style/SKILL.md</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li><li><p>Start that file with a <code>---</code> block holding a <code>name</code> and a <code>description</code> that says when to use it ("Use when writing a git commit message"), then write your rules below it.</p></li></ol></section>
+<section aria-labelledby="cheat-h"><h2 id="cheat-h">Cheat sheet</h2><ul class="cheat"><li>Use it for anything you keep re-explaining: your commit format, your brand voice, your checklists.</li><li>The description decides when it fires. Vague description, no skill.</li><li>Keep <code>SKILL.md</code> short (under 500 lines) and move long references to other files in the folder.</li><li>Skip it for one-off tasks. A skill pays off the second time you'd repeat yourself.</li><li>The PDF, Word, Excel and PowerPoint skills are source-available, not open source. Most of the others are Apache 2.0.</li></ul></section>
+<section aria-labelledby="take-h"><h2 id="take-h">Axo&#39;s take</h2>
+<div class="dialog"><div class="dialog__axo"><img class="pixel" src="/assets/axo/axo_smug.png" width="64" height="77" alt="" aria-hidden="true"></div><div class="dialog__box"><span class="dialog__name">AXO</span><p>Taught it my commit format once. Haven't retyped it since.</p></div></div></section>
+<section class="join" aria-labelledby="join-h">
+  <h2 id="join-h">Get every link first</h2>
+  <p>Follow me for the next drop. Axo&#39;s Den, my broadcast channel, opens soon. Free. No spam. I&#39;m an axolotl, I don&#39;t have the energy.</p>
+  <div class="btns"><a class="btn btn--den" href="https://www.instagram.com/axo.tries/" rel="noopener">Follow @axo.tries</a></div>
+</section>
+</main>
+<footer>
+  <a class="back" href="/">&larr; All links</a>
+  <p class="fine">Axo is an AI character. Links verified on Oct 1, 2026. Product names belong to their owners; no affiliation.</p>
+</footer>
+</div>
+<script src="/assets/vault.js?v=97cd17d3" defer></script>
+<script data-goatcounter="https://axotries.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
