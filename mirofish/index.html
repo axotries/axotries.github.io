@@ -1,0 +1,70 @@
+<!doctype html>
+<!-- Codex: resource addition 2026-10-05; existing Axo Vault renderer and layout. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MiroFish · TRY IT · Axo Vault</title>
+<meta name="description" content="Explore what-if scenarios with a simulated world of AI agents. Setup, cheat sheet and Axo&#x27;s verdict: try it.">
+<meta name="theme-color" content="#2B1E16">
+<link rel="canonical" href="https://axotries.github.io/mirofish/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Axo Vault">
+<meta property="og:title" content="MiroFish: try it">
+<meta property="og:description" content="Explore what-if scenarios with a simulated world of AI agents. Setup, cheat sheet and Axo&#x27;s verdict: try it.">
+<meta property="og:url" content="https://axotries.github.io/mirofish/">
+<meta property="og:image" content="https://axotries.github.io/assets/og/mirofish.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Axo&#x27;s verdict on MiroFish: TRY IT">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/press-start-2p-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/vt323-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/style.css?v=636053a5">
+</head>
+<body class="resource">
+<div class="wrap">
+<header class="tv">
+  <div class="tv__wood"><div class="tv__plate">AXO-VISION · MIROFISH</div></div>
+  <div class="tv__screen">
+    <div class="tv__picture">
+      <div class="sun" aria-hidden="true"></div><div class="ground" aria-hidden="true"></div>
+      <h1 class="tv__title">MiroFish</h1>
+      <p class="tv__sub">Explore what-if scenarios with a simulated world of AI agents.</p>
+      <div class="tv__stage">
+        <div class="axo"><img class="pixel" src="/assets/axo/axo_typing.png" width="64" height="77" alt="Axo, a pixel-art axolotl in an orange turtleneck, typing on a keyboard"></div>
+        <div class="stamp" aria-label="TRY IT">TRY IT</div>
+      </div>
+    </div>
+  </div>
+  <div class="tv__controls" aria-hidden="true"><div class="grille"></div><div class="knob"></div><div class="knob"></div><div class="chan">CH 09</div></div>
+</header>
+<main>
+<section class="get" aria-label="Get it">
+  <a class="btn btn--main" href="https://github.com/666ghj/MiroFish" rel="noopener">Open the repository <span aria-hidden="true">&#8599;</span></a>
+  <p class="url">github.com/666ghj/MiroFish</p>
+  <ul class="facts"><li><strong>Multi-agent simulations from your seed materials</strong></li><li><strong>Explore scenarios, reports and simulated agents</strong></li><li><strong>AGPL-3.0 license; LLM and Zep usage can cost extra</strong></li></ul>
+  <p class="verified">Verified Oct 5, 2026</p>
+</section>
+<section aria-labelledby="what-h"><h2 id="what-h">What it is</h2><p>An open-source multi-agent simulation engine. Give it seed materials and a question: its documented workflow builds a knowledge graph, creates agent personas, runs a simulation and generates a report. You can then interact with simulated agents and the report agent.</p></section>
+<section aria-labelledby="setup-h"><h2 id="setup-h">Setup</h2><ol class="steps"><li><p>Start with the <a class="inline" href="https://666ghj.github.io/mirofish-demo/" rel="noopener">official demo</a> to explore the prepared example before setting up your own instance.</p></li><li><p>For local setup, use Node.js 18+, Python 3.11 or 3.12, Git and <a class="inline" href="https://docs.astral.sh/uv/getting-started/installation/" rel="noopener">uv</a>. Clone the repository and enter its folder.</p><div class="cmd"><code>git clone https://github.com/666ghj/MiroFish.git</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div><div class="cmd"><code>cd MiroFish</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li><li><p>Copy <code>.env.example</code> to <code>.env</code>. Set <code>LLM_API_KEY</code>, <code>LLM_BASE_URL</code>, <code>LLM_MODEL_NAME</code> and <code>ZEP_API_KEY</code> for your providers. Keep your keys private.</p></li><li><p>From the project root, install the frontend and backend dependencies, then start both services.</p><div class="cmd"><code>npm run setup:all</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div><div class="cmd"><code>npm run dev</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li><li><p>Open <code>localhost:3000</code> in your browser; the backend API runs on port 5001. Follow the app workflow with your seed materials and scenario question.</p></li></ol></section>
+<section aria-labelledby="cheat-h"><h2 id="cheat-h">Cheat sheet</h2><ul class="cheat"><li><a class="inline" href="https://666ghj.github.io/mirofish-demo/" rel="noopener">Try the official demo</a>: the project's prepared simulation example.</li><li><a class="inline" href="https://github.com/666ghj/MiroFish" rel="noopener">Repository and current setup instructions</a>.</li><li><a class="inline" href="https://github.com/666ghj/MiroFish/blob/main/backend/pyproject.toml" rel="noopener">Backend requirements</a>: Python 3.11-3.12 and the simulation dependencies.</li><li><a class="inline" href="https://github.com/666ghj/MiroFish/blob/main/package.json" rel="noopener">Commands and Node.js requirements</a>: run setup and development commands from the repository root.</li><li>LLM API and Zep Cloud credentials are required by the documented local setup. Check their usage charges; an open-source license does not make hosted services free.</li></ul></section>
+<section aria-labelledby="take-h"><h2 id="take-h">Axo&#39;s take</h2>
+<div class="dialog"><div class="dialog__axo"><img class="pixel" src="/assets/axo/axo_smug.png" width="64" height="77" alt="" aria-hidden="true"></div><div class="dialog__box"><span class="dialog__name">AXO</span><p>Try it if you want to explore how a scenario could unfold with interacting agents. Treat the report as a simulation shaped by its inputs and model assumptions, then compare it with real evidence. Axo has not independently tested its predictive accuracy.</p></div></div></section>
+<section class="join" aria-labelledby="join-h">
+  <h2 id="join-h">Get every link first</h2>
+  <p>Follow me for the next drop. Axo&#39;s Den, my broadcast channel, opens soon. Free. No spam. I&#39;m an axolotl, I don&#39;t have the energy.</p>
+  <div class="btns"><a class="btn btn--den" href="https://www.instagram.com/axo.tries/" rel="noopener">Follow @axo.tries</a></div>
+</section>
+</main>
+<footer>
+  <a class="back" href="/">&larr; All links</a>
+  <p class="fine">Axo is an AI character. Links verified on Oct 5, 2026. Product names belong to their owners; no affiliation.</p>
+</footer>
+</div>
+<script src="/assets/vault.js?v=636053a5" defer></script>
+<script data-goatcounter="https://axotries.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

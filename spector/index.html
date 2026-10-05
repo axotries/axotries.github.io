@@ -1,0 +1,68 @@
+<!doctype html>
+<!-- Codex: resource addition 2026-10-05; existing Axo Vault renderer and layout. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SkillSpector · TRY IT · Axo Vault</title>
+<meta name="description" content="Inspect agent skills and review potential security risks before installing them. Setup, cheat sheet and Axo&#x27;s verdict: try it.">
+<meta name="theme-color" content="#2B1E16">
+<link rel="canonical" href="https://axotries.github.io/spector/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Axo Vault">
+<meta property="og:title" content="SkillSpector: try it">
+<meta property="og:description" content="Inspect agent skills and review potential security risks before installing them. Setup, cheat sheet and Axo&#x27;s verdict: try it.">
+<meta property="og:url" content="https://axotries.github.io/spector/">
+<meta property="og:image" content="https://axotries.github.io/assets/og/spector.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Axo&#x27;s verdict on SkillSpector: TRY IT">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/press-start-2p-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/vt323-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/style.css?v=636053a5">
+</head>
+<body class="resource">
+<div class="wrap">
+<header class="tv">
+  <div class="tv__wood"><div class="tv__plate">AXO-VISION · SPECTOR</div></div>
+  <div class="tv__screen">
+    <div class="tv__picture">
+      <div class="sun" aria-hidden="true"></div><div class="ground" aria-hidden="true"></div>
+      <h1 class="tv__title">SkillSpector</h1>
+      <p class="tv__sub">Inspect agent skills and review potential security risks before installing them.</p>
+      <div class="tv__stage">
+        <div class="axo"><img class="pixel" src="/assets/axo/axo_point.png" width="64" height="77" alt="Axo, a pixel-art axolotl in an orange turtleneck, pointing"></div>
+        <div class="stamp" aria-label="TRY IT">TRY IT</div>
+      </div>
+    </div>
+  </div>
+  <div class="tv__controls" aria-hidden="true"><div class="grille"></div><div class="knob"></div><div class="knob"></div><div class="chan">CH 08</div></div>
+</header>
+<main>
+<section class="get" aria-label="Get it">
+  <a class="btn btn--main" href="https://github.com/NVIDIA/SkillSpector" rel="noopener">Open the repository and docs <span aria-hidden="true">&#8599;</span></a>
+  <p class="url">github.com/NVIDIA/SkillSpector</p>
+  <ul class="facts"><li><strong>NVIDIA security scanner for AI agent skills</strong></li><li><strong>Static checks with optional LLM analysis</strong></li><li><strong>Python 3.12–3.14; Apache-2.0 license</strong></li></ul>
+  <p class="verified">Verified Oct 5, 2026</p>
+</section>
+<section aria-labelledby="what-h"><h2 id="what-h">What it is</h2><p>NVIDIA's scanner for AI agent skills. It accepts Git repositories, URLs, ZIP archives, local directories and single files such as SKILL.md. It reads eligible skill content using static checks and optional LLM analysis, then produces findings to review. It does not execute the scanned skill.</p></section>
+<section aria-labelledby="setup-h"><h2 id="setup-h">Setup</h2><ol class="steps"><li><p>Have uv, Git and Python 3.12–3.14 available. Install the CLI from the official repository.</p><div class="cmd"><code>uv tool install git+https://github.com/NVIDIA/skillspector.git</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li><li><p>Scan a local skill folder using static checks only. Replace the example folder with your skill's path.</p><div class="cmd"><code>skillspector scan ./my-skill/ --no-llm</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li><li><p>Save findings as a JSON report for your next step.</p><div class="cmd"><code>skillspector scan ./my-skill/ --no-llm --format json --output report.json</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li><li><p>Review the reported files, lines and explanations before deciding whether to install the skill.</p></li></ol></section>
+<section aria-labelledby="cheat-h"><h2 id="cheat-h">Cheat sheet</h2><ul class="cheat"><li><a class="inline" href="https://github.com/NVIDIA/SkillSpector#quick-start" rel="noopener">Repository and installation</a>.</li><li><a class="inline" href="https://docs.nvidia.com/skills/scanning-agent-skills" rel="noopener">Official scan guide</a>.</li><li><a class="inline" href="https://github.com/NVIDIA/SkillSpector#trust-model-and-data-egress" rel="noopener">Trust model and limitations</a>.</li><li>Replace the input path with a SKILL.md file, a ZIP file or a repository URL. Terminal, JSON, Markdown and SARIF outputs are supported.</li><li><code>--no-llm</code> disables optional semantic LLM analysis. It does not disable the OSV.dev dependency lookup: that check sends package names and versions, with an offline fallback.</li><li>Optional LLM analysis needs a configured provider and credentials or an authenticated local runtime; eligible file contents go to that provider. Provider charges or subscription usage may apply.</li><li>Apache-2.0 licensed. The scanner can flag false positives and miss some risks. It is not a sandbox or a safety certificate; review findings and limitations.</li></ul></section>
+<section class="join" aria-labelledby="join-h">
+  <h2 id="join-h">Get every link first</h2>
+  <p>Follow me for the next drop. Axo&#39;s Den, my broadcast channel, opens soon. Free. No spam. I&#39;m an axolotl, I don&#39;t have the energy.</p>
+  <div class="btns"><a class="btn btn--den" href="https://www.instagram.com/axo.tries/" rel="noopener">Follow @axo.tries</a></div>
+</section>
+</main>
+<footer>
+  <a class="back" href="/">&larr; All links</a>
+  <p class="fine">Axo is an AI character. Links verified on Oct 5, 2026. Product names belong to their owners; no affiliation.</p>
+</footer>
+</div>
+<script src="/assets/vault.js?v=636053a5" defer></script>
+<script data-goatcounter="https://axotries.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
