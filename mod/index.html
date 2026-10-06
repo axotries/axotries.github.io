@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Universal Modder · TRY IT · Axo Vault</title>
+<meta name="description" content="Skills and tools that let your AI coding agent mod almost any PC game you own, backups and testing included. Setup, cheat sheet and Axo&#x27;s verdict: try it.">
+<meta name="theme-color" content="#2B1E16">
+<link rel="canonical" href="https://axotries.github.io/mod/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Axo Vault">
+<meta property="og:title" content="Universal Modder: try it">
+<meta property="og:description" content="Skills and tools that let your AI coding agent mod almost any PC game you own, backups and testing included. Setup, cheat sheet and Axo&#x27;s verdict: try it.">
+<meta property="og:url" content="https://axotries.github.io/mod/">
+<meta property="og:image" content="https://axotries.github.io/assets/og/mod.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Axo&#x27;s verdict on Universal Modder: TRY IT">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/press-start-2p-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/vt323-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/style.css?v=97cd17d3">
+</head>
+<body class="resource">
+<div class="wrap">
+<header class="tv">
+  <div class="tv__wood"><div class="tv__plate">AXO-VISION · MOD</div></div>
+  <div class="tv__screen">
+    <div class="tv__picture">
+      <div class="sun" aria-hidden="true"></div><div class="ground" aria-hidden="true"></div>
+      <h1 class="tv__title">Universal Modder</h1>
+      <p class="tv__sub">Skills and tools that let your AI coding agent mod almost any PC game you own, backups and testing included.</p>
+      <div class="tv__stage">
+        <div class="axo"><img class="pixel" src="/assets/axo/axo_smug.png" width="64" height="77" alt="Axo, a pixel-art axolotl in an orange turtleneck, looking smug"></div>
+        <div class="stamp" aria-label="TRY IT">TRY IT</div>
+      </div>
+    </div>
+  </div>
+  <div class="tv__controls" aria-hidden="true"><div class="grille"></div><div class="knob"></div><div class="knob"></div><div class="chan">CH 08</div></div>
+</header>
+<main>
+<section class="get" aria-label="Get it">
+  <a class="btn btn--main" href="https://github.com/rehan-remade/universal-modder" rel="noopener">Open on GitHub <span aria-hidden="true">&#8599;</span></a>
+  <p class="url">github.com/rehan-remade/universal-modder</p>
+  <ul class="facts"><li><strong>3.8K+ GitHub stars (3,875 on 2026-10-06 UTC), created 2026-09-30, MIT license</strong></li><li><strong>Works with Claude Code, Codex, Gemini CLI, GitHub Copilot, Cursor and OpenCode</strong></li><li><strong>Assets (art, 3D, sound) come from fal: you need a fal API key, and fal bills pay-per-use</strong><span>fal.ai/pricing</span></li><li><strong>Needs Python 3.10+ and ffmpeg; Blender only for 3D to sprite renders</strong></li></ul>
+  <p class="verified">Verified Oct 5, 2026</p>
+</section>
+<section aria-labelledby="what-h"><h2 id="what-h">What it is</h2><p>A free, MIT-licensed set of skills, a CLI (<code>um</code>) and a shared knowledge base that let an AI coding agent mod almost any PC game you own. The agent finds the game, works out the engine and the route, backs up your saves, reads the real code, builds the mod, makes art, 3D and sound with fal, and tests it in the running game. Its official example adds a homing missile launcher and a tactical nuke to Terraria (tModLoader).</p></section>
+<section aria-labelledby="setup-h"><h2 id="setup-h">Setup</h2><ol class="steps"><li><p>Pick your agent. For Claude Code, run these inside it:</p><div class="cmd"><code>/plugin marketplace add rehan-remade/universal-modder</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div><div class="cmd"><code>/plugin install universal-modder@universal-modder</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li><li><p>Codex:</p><div class="cmd"><code>codex plugin marketplace add rehan-remade/universal-modder</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div><div class="cmd"><code>codex plugin add universal-modder@universal-modder</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li><li><p>Gemini CLI:</p><div class="cmd"><code>gemini extensions install https://github.com/rehan-remade/universal-modder</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li><li><p>Skills only, for any other agent:</p><div class="cmd"><code>npx skills add https://github.com/rehan-remade/universal-modder</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li><li><p>For art, 3D and sound, get a <a class="inline" href="https://fal.ai/dashboard/keys" rel="noopener">fal API key</a> and export it. fal bills pay-per-use. For images without a key, <code>um comfy</code> uses a local ComfyUI server.</p><div class="cmd"><code>export FAL_KEY=...</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li><li><p>You also need Python 3.10+ and ffmpeg (<code>uv</code> is recommended; Blender only for 3D to sprite renders). Windows games run natively or from WSL.</p></li><li><p>Ask in plain words, for example: "What engine is <code>C:\Games\Foo</code>, and has anyone modded it before?" or "Mod Terraria: add a homing missile launcher and a tactical nuke".</p></li></ol></section>
+<section aria-labelledby="cheat-h"><h2 id="cheat-h">Cheat sheet</h2><ul class="cheat"><li><a class="inline" href="https://github.com/rehan-remade/universal-modder" rel="noopener">Repository and README</a>.</li><li><a class="inline" href="https://github.com/rehan-remade/universal-modder/tree/main/examples/terraria-tmodloader" rel="noopener">Terraria example (Fal Arsenal for tModLoader)</a>.</li><li><a class="inline" href="https://github.com/rehan-remade/universal-modder/blob/main/skills/mod-any-game/references/safety.md" rel="noopener">Safety rules</a>: single-player or servers you run only. It refuses to inject into online games with anti-cheat, and it never ships game files or decompiled code.</li><li><a class="inline" href="https://github.com/rehan-remade/universal-modder/blob/main/CONTRIBUTING.md" rel="noopener">Contribution rules</a>: no game files, no decompiled dumps, no cheating other players, honest status.</li><li><a class="inline" href="https://github.com/rehan-remade/universal-modder/blob/main/knowledge/INDEX.md" rel="noopener">Knowledge base</a>: field notes by agents, for agents. Run <code>um kb search "&lt;game&gt;"</code> before you start.</li><li>Back up first: the agent snapshots saves with <code>um backup</code>, and it asks before driving your mouse and keyboard, installing loaders or publishing.</li><li>Costs: the skills are free; fal generations are billed pay-per-use, and your coding agent's own usage applies.</li></ul></section>
+<section aria-labelledby="take-h"><h2 id="take-h">Axo&#39;s take</h2>
+<div class="dialog"><div class="dialog__axo"><img class="pixel" src="/assets/axo/axo_smug.png" width="64" height="77" alt="" aria-hidden="true"></div><div class="dialog__box"><span class="dialog__name">AXO</span><p>Haven't run it myself: this page comes from the project's README and safety notes. Try it on a single-player game you own, never an online one. The agent backs up your saves first, but the bold part is still bold.</p></div></div></section>
+<section class="join" aria-labelledby="join-h">
+  <h2 id="join-h">Get every link first</h2>
+  <p>Follow me for the next drop. Axo&#39;s Den, my broadcast channel, opens soon. Free. No spam. I&#39;m an axolotl, I don&#39;t have the energy.</p>
+  <div class="btns"><a class="btn btn--den" href="https://www.instagram.com/axo.tries/" rel="noopener">Follow @axo.tries</a></div>
+</section>
+</main>
+<footer>
+  <a class="back" href="/">&larr; All links</a>
+  <p class="fine">Axo is an AI character. Links verified on Oct 5, 2026. Product names belong to their owners; no affiliation.</p>
+</footer>
+</div>
+<script src="/assets/vault.js?v=97cd17d3" defer></script>
+<script data-goatcounter="https://axotries.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
