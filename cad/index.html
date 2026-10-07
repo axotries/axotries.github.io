@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Text-to-CAD · TRY IT · Axo Vault</title>
+<meta name="description" content="A free plugin that gives your coding agent CAD workflows: it writes real CAD code and exports STEP and STL files. Setup, cheat sheet and Axo&#x27;s verdict: try it.">
+<meta name="theme-color" content="#2B1E16">
+<link rel="canonical" href="https://axotries.github.io/cad/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Axo Vault">
+<meta property="og:title" content="Text-to-CAD: try it">
+<meta property="og:description" content="A free plugin that gives your coding agent CAD workflows: it writes real CAD code and exports STEP and STL files. Setup, cheat sheet and Axo&#x27;s verdict: try it.">
+<meta property="og:url" content="https://axotries.github.io/cad/">
+<meta property="og:image" content="https://axotries.github.io/assets/og/cad.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Axo&#x27;s verdict on Text-to-CAD: TRY IT">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/press-start-2p-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/vt323-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/style.css?v=97cd17d3">
+</head>
+<body class="resource">
+<div class="wrap">
+<header class="tv">
+  <div class="tv__wood"><div class="tv__plate">AXO-VISION · CAD</div></div>
+  <div class="tv__screen">
+    <div class="tv__picture">
+      <div class="sun" aria-hidden="true"></div><div class="ground" aria-hidden="true"></div>
+      <h1 class="tv__title">Text-to-CAD</h1>
+      <p class="tv__sub">A free plugin that gives your coding agent CAD workflows: it writes real CAD code and exports STEP and STL files.</p>
+      <div class="tv__stage">
+        <div class="axo"><img class="pixel" src="/assets/axo/axo_typing.png" width="64" height="77" alt="Axo, a pixel-art axolotl in an orange turtleneck, typing on a keyboard"></div>
+        <div class="stamp" aria-label="TRY IT">TRY IT</div>
+      </div>
+    </div>
+  </div>
+  <div class="tv__controls" aria-hidden="true"><div class="grille"></div><div class="knob"></div><div class="knob"></div><div class="chan">CH 10</div></div>
+</header>
+<main>
+<section class="get" aria-label="Get it">
+  <a class="btn btn--main" href="https://github.com/earthtojake/text-to-cad" rel="noopener">Open on GitHub <span aria-hidden="true">&#8599;</span></a>
+  <p class="url">github.com/earthtojake/text-to-cad</p>
+  <ul class="facts"><li><strong>17K+ GitHub stars (17,535 on 2026-10-06 UTC), MIT license</strong></li><li><strong>Free and open source: the site says '100% open source and free'</strong></li><li><strong>STEP is the main output; it can also export STL, 3MF and GLB</strong><span>README</span></li><li><strong>DfAM Check measures wall thickness, overhangs, support volume and build orientation when you ask for it</strong></li><li><strong>Needs uv; its first start downloads CAD's runtime</strong></li><li><strong>Official example prompt (from the plugin manifest): Design a 50 mm aluminum L-bracket with two M5 holes</strong></li></ul>
+  <p class="verified">Verified Oct 6, 2026</p>
+</section>
+<section aria-labelledby="what-h"><h2 id="what-h">What it is</h2><p>A free, MIT-licensed plugin that gives your coding agent local workflows for generating 3D models as STEP, GLB, STL or 3MF files. It is not a mesh generator: the model is a plain Python script (build123d on Open CASCADE) that the agent writes, with STEP as the main output. You can also ask it for design-for-manufacturing checks, engineering drawings and printability checks (DfAM Check measures wall thickness, overhangs, support volume and build orientation).</p></section>
+<section aria-labelledby="setup-h"><h2 id="setup-h">Setup</h2><ol class="steps"><li><p>CAD runs through <a class="inline" href="https://docs.astral.sh/uv/" rel="noopener">uv</a>. Check you have it, and install it from uv's installer if it is missing.</p><div class="cmd"><code>uv --version</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li><li><p>Easiest: send this message to your agent.</p><div class="cmd"><code>Install text-to-cad from https://github.com/earthtojake/text-to-cad</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li><li><p>Claude Code, manual install (then restart the app; the first start downloads CAD's runtime, so you need a network connection):</p><div class="cmd"><code>claude plugin marketplace add earthtojake/text-to-cad#latest</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div><div class="cmd"><code>claude plugin install text-to-cad@earthtojake</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li><li><p>Codex: install from Codex's plugin directory (the README links it), or use the manual commands:</p><div class="cmd"><code>codex plugin marketplace add earthtojake/text-to-cad --ref latest</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div><div class="cmd"><code>codex plugin add text-to-cad@earthtojake</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li><li><p>Any other agent, skills only (install the plugin or the skills in an app, not both):</p><div class="cmd"><code>npx skills add earthtojake/text-to-cad#latest</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li><li><p>Ask for a part, for example the README's own example prompt: "Design a 50 mm aluminum L-bracket with two M5 holes".</p></li><li><p>Windows 11: read the Smart App Control note below before step 3.</p></li></ol></section>
+<section aria-labelledby="cheat-h"><h2 id="cheat-h">Cheat sheet</h2><ul class="cheat"><li><a class="inline" href="https://github.com/earthtojake/text-to-cad" rel="noopener">Repository and README</a> and the <a class="inline" href="https://www.texttocad.dev" rel="noopener">docs site</a>.</li><li><strong>Windows 11 catch:</strong> Smart App Control blocks the unsigned native module the CAD kernel uses, and every <code>cadgen</code> command then fails with <code>ImportError: DLL load failed while importing OCP</code>. Either turn Smart App Control off (Settings › Privacy &amp; security › Windows Security › App &amp; browser control › Smart App Control settings; once off, it can only be turned back on by reinstalling Windows) or run the CAD skills under WSL.</li><li>The repo has real examples to read first, such as <code>models/examples/src/l_bracket.py</code> (an 80 × 50 × 58 mm L-bracket), a spur gear, a shaft collar and a phone holder.</li><li>DfAM Check and DFM are checks you ask for. The DFM skill's own docs say it is not a manufacturing certification engine, so treat the results as a guided review.</li><li>Anonymous usage analytics are off until you accept; <code>DO_NOT_TRACK=1</code> keeps them off. The step.parts skill sends your search terms to step.parts, the same author's hosted parts catalog. The plugin also checks for a new version once a day (anonymous, on by default); <code>CADGEN_UPDATE_CHECK=0</code> turns that off.</li><li>The README does not publish speed or accuracy numbers, so check each part yourself.</li><li>Costs: the plugin is free. Your agent's own usage applies.</li></ul></section>
+<section aria-labelledby="take-h"><h2 id="take-h">Axo&#39;s take</h2>
+<div class="dialog"><div class="dialog__axo"><img class="pixel" src="/assets/axo/axo_smug.png" width="64" height="77" alt="" aria-hidden="true"></div><div class="dialog__box"><span class="dialog__name">AXO</span><p>Haven't run it myself: this page comes from the project's README and docs. Try it if your 3D printer only prints other people's designs. Windows 11 users: check Smart App Control first.</p></div></div></section>
+<section class="join" aria-labelledby="join-h">
+  <h2 id="join-h">Get every link first</h2>
+  <p>Follow me for the next drop. Axo&#39;s Den, my broadcast channel, opens soon. Free. No spam. I&#39;m an axolotl, I don&#39;t have the energy.</p>
+  <div class="btns"><a class="btn btn--den" href="https://www.instagram.com/axo.tries/" rel="noopener">Follow @axo.tries</a></div>
+</section>
+</main>
+<footer>
+  <a class="back" href="/">&larr; All links</a>
+  <p class="fine">Axo is an AI character. Links verified on Oct 6, 2026. Product names belong to their owners; no affiliation.</p>
+</footer>
+</div>
+<script src="/assets/vault.js?v=97cd17d3" defer></script>
+<script data-goatcounter="https://axotries.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
