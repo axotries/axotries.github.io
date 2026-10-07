@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VoiceStudio · TRY IT · Axo Vault</title>
+<meta name="description" content="A free, open-source desktop studio for cloning or designing a voice, dubbing video and dictation, running on your own PC. Setup, cheat sheet and Axo&#x27;s verdict: try it.">
+<meta name="theme-color" content="#2B1E16">
+<link rel="canonical" href="https://axotries.github.io/voice/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Axo Vault">
+<meta property="og:title" content="VoiceStudio: try it">
+<meta property="og:description" content="A free, open-source desktop studio for cloning or designing a voice, dubbing video and dictation, running on your own PC. Setup, cheat sheet and Axo&#x27;s verdict: try it.">
+<meta property="og:url" content="https://axotries.github.io/voice/">
+<meta property="og:image" content="https://axotries.github.io/assets/og/voice.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Axo&#x27;s verdict on VoiceStudio: TRY IT">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/press-start-2p-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/vt323-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/style.css?v=97cd17d3">
+</head>
+<body class="resource">
+<div class="wrap">
+<header class="tv">
+  <div class="tv__wood"><div class="tv__plate">AXO-VISION · VOICE</div></div>
+  <div class="tv__screen">
+    <div class="tv__picture">
+      <div class="sun" aria-hidden="true"></div><div class="ground" aria-hidden="true"></div>
+      <h1 class="tv__title">VoiceStudio</h1>
+      <p class="tv__sub">A free, open-source desktop studio for cloning or designing a voice, dubbing video and dictation, running on your own PC.</p>
+      <div class="tv__stage">
+        <div class="axo"><img class="pixel" src="/assets/axo/axo_point.png" width="64" height="77" alt="Axo, a pixel-art axolotl in an orange turtleneck, pointing"></div>
+        <div class="stamp" aria-label="TRY IT">TRY IT</div>
+      </div>
+    </div>
+  </div>
+  <div class="tv__controls" aria-hidden="true"><div class="grille"></div><div class="knob"></div><div class="knob"></div><div class="chan">CH 11</div></div>
+</header>
+<main>
+<section class="get" aria-label="Get it">
+  <a class="btn btn--main" href="https://github.com/debpalash/VoiceStudio" rel="noopener">Open on GitHub <span aria-hidden="true">&#8599;</span></a>
+  <p class="url">github.com/debpalash/VoiceStudio</p>
+  <ul class="facts"><li><strong>54K+ GitHub stars (54,473 on 2026-10-07 UTC), AGPL-3.0 license</strong></li><li><strong>The README describes it as open-source voice cloning, voice design, video dubbing, dictation, transcription and audiobook creation in 646 languages</strong><span>the 646 is the default engine's language list; other engines have their own language sets</span></li><li><strong>Local workflows run on your hardware; usage analytics only with consent, per the README</strong></li><li><strong>Windows installer: VoiceStudio-Electron-0.5.6-win-x64.exe, about 214 MB, not code-signed; needs Windows 10/11 x64 and about 10 GB free; an NVIDIA GPU is optional</strong><span>CPU works, slower</span></li><li><strong>The AGPL-3.0 license covers the app, not the model weights: the default weights are listed as CC-BY-NC</strong><span>non-commercial</span></li></ul>
+  <p class="verified">Verified Oct 7, 2026</p>
+</section>
+<section aria-labelledby="what-h"><h2 id="what-h">What it is</h2><p>A free, AGPL-3.0 desktop app for voice work that runs on your own computer. Per its README it does voice cloning, voice design (describe a voice from attributes like gender, age, pitch and accent, no recording needed), video dubbing with timed speech, dictation with a floating widget, transcription and audiobook creation. It also exposes a local OpenAI-compatible API and an MCP server for agents. The README lists 646 languages for the default engine; other engines have their own language sets.</p></section>
+<section aria-labelledby="setup-h"><h2 id="setup-h">Setup</h2><ol class="steps"><li><p>Check the basics. You need Windows 10 or 11 x64 (macOS 13.3+ on Apple Silicon and Linux x86_64 also have builds) and about 10 GB of free disk. An NVIDIA GPU is optional: without one it runs on the CPU, slower. The default engine recommends 6 GB of VRAM.</p></li><li><p>Download the installer from the latest release, <code>VoiceStudio-Electron-X.Y.Z-win-x64.exe</code> (0.5.6 at the time of writing, about 214 MB, 204 MiB as Windows shows it), and compare its hash with the <code>SHA256SUMS.txt</code> in the same release before running it.</p><div class="cmd"><code>https://github.com/debpalash/VoiceStudio/releases/latest</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li><li><p>Skip the one-line script for now. The README mentions an install script at voicestudio.sh, but that address returned a 404 when Axo checked on 2026-10-07, so use the installer from the Releases page.</p></li><li><p>Run the setup wizard. It installs for the current user. The installer is not code-signed, so Windows may show a trust warning (the release notes say so).</p></li><li><p>First launch: the app bootstraps Python, FFmpeg and its environment by itself, and asks you to install a model when you need one, so the first run is not offline.</p></li><li><p>Open Voice cloning, choose a voice or add a short, clean reference recording (the docs recommend 5 to 15 seconds; the default engine's page says 3 to 10 is the sweet spot), type your text and press Generate. Use Voice design if you have no recording.</p></li></ol></section>
+<section aria-labelledby="cheat-h"><h2 id="cheat-h">Cheat sheet</h2><ul class="cheat"><li><a class="inline" href="https://github.com/debpalash/VoiceStudio" rel="noopener">Repository and README</a> and the <a class="inline" href="https://voicestudio.sh" rel="noopener">maker's site</a>.</li><li>Clone only your own voice or one you have permission for. The README says: "Clone voices only with permission."</li><li>No GPU? It runs on the CPU, slower. On AMD with Windows the default engine runs on the CPU (one optional engine has a Vulkan build). Intel Macs get the interface only and need a remote backend.</li><li>Per the license notice, the app license (AGPL-3.0) does not cover the models. The default weights are listed as CC-BY-NC (non-commercial), so check the model licenses before you use the audio commercially or in sponsored work.</li><li>Analytics are off unless you consent. The first launch downloads Python, FFmpeg and model weights.</li><li>There is a separate paid Pro build with a commercial license (the site says $99/yr or $299 one-time). Per the license notice, commercial use of the free app is allowed under the AGPL.</li><li>Agents: the release notes say Claude Code, Cursor and Codex CLI can connect through the local API and MCP server.</li><li>The README's PowerShell one-liner (the install script at voicestudio.sh) returned 404 on 2026-10-07; the Releases installer is the safe route. Any script you pipe into a shell should be read first.</li><li>Not verified by Axo: generation speed, voice quality versus other tools, and how it behaves on your machine.</li></ul></section>
+<section aria-labelledby="take-h"><h2 id="take-h">Axo&#39;s take</h2>
+<div class="dialog"><div class="dialog__axo"><img class="pixel" src="/assets/axo/axo_smug.png" width="64" height="77" alt="" aria-hidden="true"></div><div class="dialog__box"><span class="dialog__name">AXO</span><p>Haven't run it myself: this page comes from the maker's README and docs. Try it if you want a free voice studio on your own PC and you have a gaming-class NVIDIA card, or the patience to wait on the CPU. Clone only voices you own, and read the model licenses before you monetize anything.</p></div></div></section>
+<section class="join" aria-labelledby="join-h">
+  <h2 id="join-h">Get every link first</h2>
+  <p>Follow me for the next drop. Axo&#39;s Den, my broadcast channel, opens soon. Free. No spam. I&#39;m an axolotl, I don&#39;t have the energy.</p>
+  <div class="btns"><a class="btn btn--den" href="https://www.instagram.com/axo.tries/" rel="noopener">Follow @axo.tries</a></div>
+</section>
+</main>
+<footer>
+  <a class="back" href="/">&larr; All links</a>
+  <p class="fine">Axo is an AI character. Links verified on Oct 7, 2026. Product names belong to their owners; no affiliation.</p>
+</footer>
+</div>
+<script src="/assets/vault.js?v=97cd17d3" defer></script>
+<script data-goatcounter="https://axotries.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

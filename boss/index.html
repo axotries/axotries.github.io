@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paperclip · TRY IT · Axo Vault</title>
+<meta name="description" content="A free, self-hosted app that runs a team of AI agents like a company: org chart, goals, budgets and approvals. Setup, cheat sheet and Axo&#x27;s verdict: try it.">
+<meta name="theme-color" content="#2B1E16">
+<link rel="canonical" href="https://axotries.github.io/boss/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Axo Vault">
+<meta property="og:title" content="Paperclip: try it">
+<meta property="og:description" content="A free, self-hosted app that runs a team of AI agents like a company: org chart, goals, budgets and approvals. Setup, cheat sheet and Axo&#x27;s verdict: try it.">
+<meta property="og:url" content="https://axotries.github.io/boss/">
+<meta property="og:image" content="https://axotries.github.io/assets/og/boss.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Axo&#x27;s verdict on Paperclip: TRY IT">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/press-start-2p-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/vt323-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/style.css?v=97cd17d3">
+</head>
+<body class="resource">
+<div class="wrap">
+<header class="tv">
+  <div class="tv__wood"><div class="tv__plate">AXO-VISION · BOSS</div></div>
+  <div class="tv__screen">
+    <div class="tv__picture">
+      <div class="sun" aria-hidden="true"></div><div class="ground" aria-hidden="true"></div>
+      <h1 class="tv__title">Paperclip</h1>
+      <p class="tv__sub">A free, self-hosted app that runs a team of AI agents like a company: org chart, goals, budgets and approvals.</p>
+      <div class="tv__stage">
+        <div class="axo"><img class="pixel" src="/assets/axo/axo_stamp.png" width="64" height="77" alt="Axo, a pixel-art axolotl in an orange turtleneck, holding a stamp"></div>
+        <div class="stamp" aria-label="TRY IT">TRY IT</div>
+      </div>
+    </div>
+  </div>
+  <div class="tv__controls" aria-hidden="true"><div class="grille"></div><div class="knob"></div><div class="knob"></div><div class="chan">CH 12</div></div>
+</header>
+<main>
+<section class="get" aria-label="Get it">
+  <a class="btn btn--main" href="https://github.com/paperclipai/paperclip" rel="noopener">Open on GitHub <span aria-hidden="true">&#8599;</span></a>
+  <p class="url">github.com/paperclipai/paperclip</p>
+  <ul class="facts"><li><strong>98K+ GitHub stars (98,249 on 2026-10-07 UTC), MIT license, created 2026-03-02</strong></li><li><strong>The README: "If OpenClaw is an employee, Paperclip is the company." A Node.js server and React UI that orchestrates a team of AI agents</strong></li><li><strong>Budgets at company, agent and project level; per the docs, at 100% the agent is paused automatically</strong><span>the README admits in-flight work can delay a stop</span></li><li><strong>The README lists Claude Code, Codex, Cursor, OpenClaw, Gemini CLI, OpenCode, Pi, Hermes, Grok Build and Kimi Code as agents it can run</strong></li><li><strong>Needs Node.js 24.11+; the managed install is documented for macOS, Linux or WSL2 (native Windows is not documented; the CLI docs say service management is unavailable on Windows); you pay your own model tokens</strong><span>the official guide estimates $5-20 to play with it</span></li></ul>
+  <p class="verified">Verified Oct 7, 2026</p>
+</section>
+<section aria-labelledby="what-h"><h2 id="what-h">What it is</h2><p>A free, MIT-licensed Node.js server and React UI that orchestrates a team of AI agents. Per its README, it looks like a task manager but has an org chart, budgets, governance and goal alignment under the hood: your agents get a boss, a title and a job description, you set a company goal and "hire the team" (CEO, CTO, engineers, designers, marketers), and you approve the strategy and watch spend from a dashboard. The README says it is not an agent framework or a prompt manager: agents bring their own prompts, models and runtimes. The model itself is not included.</p></section>
+<section aria-labelledby="setup-h"><h2 id="setup-h">Setup</h2><ol class="steps"><li><p>Install Node.js 24.11 or newer, plus your agent's CLI and account (Claude Code or Codex) or an API key from the model provider. The managed install is documented for macOS, Linux or WSL2; native Windows is not documented, so on Windows the documented route is WSL2 (not tested by Axo). Local Claude and Codex subscription sign-in also needs Python 3 and the provider CLI.</p></li><li><p>Run the onboarding. It starts the app with an embedded PostgreSQL database, no setup needed. The UI and API open on your own machine, on port 3100.</p><div class="cmd"><code>npx paperclipai@latest onboard --yes</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li><li><p>In the UI, create your company, define the goal and create a CEO agent with its adapter (Claude Code, Codex and others).</p></li><li><p>Set budgets for the company and for each agent before you turn heartbeats on, then approve the CEO's strategy. The CEO cannot move tasks to in-progress until you approve it.</p></li><li><p>To start it again later:</p><div class="cmd"><code>npx paperclipai run</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li><li><p>For an isolated trial with a CEO already created (set your own key first):</p><div class="cmd"><code>ANTHROPIC_API_KEY=... npx paperclipai test-drive</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li></ol></section>
+<section aria-labelledby="cheat-h"><h2 id="cheat-h">Cheat sheet</h2><ul class="cheat"><li><a class="inline" href="https://github.com/paperclipai/paperclip" rel="noopener">Repository and README</a>, <a class="inline" href="https://docs.paperclip.ing" rel="noopener">docs</a> and the <a class="inline" href="https://docs.paperclip.ing/guides/getting-started/five-minute-path/" rel="noopener">five-minute guide</a>.</li><li>It costs tokens. The app is free, but every agent runs on your provider account. The official guide says: "Plan on spending $5-20 to play with the product, $20-100/month for an active company."</li><li>Budgets exist at company, agent and project level. Company and agent budgets are monthly; a project budget is a lifetime cap. At 100% the agent is paused automatically, but the README says "usage reporting and in-flight work can delay a stop", so start low.</li><li>You are "the board": hire approvals are optional and the CEO's strategy needs your approval. This is a governance board, not a Kanban board.</li><li>Agents wake in heartbeats (on a timer you turn on, an assignment, a routine or a manual invoke; the README says a mention alone does not wake an agent), not continuously. Mutating actions, approvals, comments and cost events are recorded as activity.</li><li>Cloud is only a waitlist, with no published price. Native Windows is not documented. Telemetry is anonymous and on by default; <code>DO_NOT_TRACK=1</code> turns it off.</li><li>Axo's note: skip it if you only use one agent for small jobs (the README says one agent is fine to start).</li><li>Not verified by Axo: how it runs on Windows, and what a real team of agents costs.</li></ul></section>
+<section aria-labelledby="take-h"><h2 id="take-h">Axo&#39;s take</h2>
+<div class="dialog"><div class="dialog__axo"><img class="pixel" src="/assets/axo/axo_smug.png" width="64" height="77" alt="" aria-hidden="true"></div><div class="dialog__box"><span class="dialog__name">AXO</span><p>Haven't run it myself: this page comes from the project's README and docs. Try it if you already run several coding agents and keep losing track of who is doing what and how many tokens they burn. Set a budget first: the app is free, your tokens are not.</p></div></div></section>
+<section class="join" aria-labelledby="join-h">
+  <h2 id="join-h">Get every link first</h2>
+  <p>Follow me for the next drop. Axo&#39;s Den, my broadcast channel, opens soon. Free. No spam. I&#39;m an axolotl, I don&#39;t have the energy.</p>
+  <div class="btns"><a class="btn btn--den" href="https://www.instagram.com/axo.tries/" rel="noopener">Follow @axo.tries</a></div>
+</section>
+</main>
+<footer>
+  <a class="back" href="/">&larr; All links</a>
+  <p class="fine">Axo is an AI character. Links verified on Oct 7, 2026. Product names belong to their owners; no affiliation.</p>
+</footer>
+</div>
+<script src="/assets/vault.js?v=97cd17d3" defer></script>
+<script data-goatcounter="https://axotries.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
