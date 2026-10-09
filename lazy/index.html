@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ponytail · TRY IT · Axo Vault</title>
+<meta name="description" content="A free prompt that makes your coding agent ask &#x27;does this need to exist?&#x27; and write the shortest diff that works. Setup, cheat sheet and Axo&#x27;s verdict: try it.">
+<meta name="theme-color" content="#2B1E16">
+<link rel="canonical" href="https://axotries.github.io/lazy/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Axo Vault">
+<meta property="og:title" content="Ponytail: try it">
+<meta property="og:description" content="A free prompt that makes your coding agent ask &#x27;does this need to exist?&#x27; and write the shortest diff that works. Setup, cheat sheet and Axo&#x27;s verdict: try it.">
+<meta property="og:url" content="https://axotries.github.io/lazy/">
+<meta property="og:image" content="https://axotries.github.io/assets/og/lazy.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Axo&#x27;s verdict on Ponytail: TRY IT">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/press-start-2p-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/vt323-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/style.css?v=97cd17d3">
+</head>
+<body class="resource">
+<div class="wrap">
+<header class="tv">
+  <div class="tv__wood"><div class="tv__plate">AXO-VISION · LAZY</div></div>
+  <div class="tv__screen">
+    <div class="tv__picture">
+      <div class="sun" aria-hidden="true"></div><div class="ground" aria-hidden="true"></div>
+      <h1 class="tv__title">Ponytail</h1>
+      <p class="tv__sub">A free prompt that makes your coding agent ask &#x27;does this need to exist?&#x27; and write the shortest diff that works.</p>
+      <div class="tv__stage">
+        <div class="axo"><img class="pixel" src="/assets/axo/axo_shrug.png" width="64" height="77" alt="Axo, a pixel-art axolotl in an orange turtleneck, shrugging"></div>
+        <div class="stamp" aria-label="TRY IT">TRY IT</div>
+      </div>
+    </div>
+  </div>
+  <div class="tv__controls" aria-hidden="true"><div class="grille"></div><div class="knob"></div><div class="knob"></div><div class="chan">CH 13</div></div>
+</header>
+<main>
+<section class="get" aria-label="Get it">
+  <a class="btn btn--main" href="https://github.com/DietrichGebert/ponytail" rel="noopener">Open on GitHub <span aria-hidden="true">&#8599;</span></a>
+  <p class="url">github.com/DietrichGebert/ponytail</p>
+  <ul class="facts"><li><strong>159K+ GitHub stars (159,123 on 2026-10-09 UTC), MIT license, created 2026-06-12</strong></li><li><strong>It is one prompt (a skill plus a compact AGENTS.md); on Claude Code and Codex it installs as a plugin with small Node.js lifecycle hooks</strong></li><li><strong>The maker's earlier benchmark of v4.13: about 54% less code (lines added in the git diff; up to 94% on one task), 22% fewer tokens, 20% cheaper and 27% faster. Claude Code with Haiku 4.5, 12 feature tickets on one FastAPI + React repo, 4 runs each. The current README (v5.1.0) headlines a newer one: -53% lines, -45% output tokens, -26% cost, -41% time, Claude Code with Opus 5.5, 39 tasks, 5 runs each</strong></li><li><strong>Both benchmarks are the maker's and on Claude Code only; the 2026-10-07 benchmark file says Codex, Cursor, Copilot and other agents were not measured. The older one measured diff size, tokens, cost, time and a small safety check; the newer one adds hidden correctness checks on 18 tasks and tests</strong></li><li><strong>Claude Code install takes two separate prompts; the hooks need node on your PATH</strong></li></ul>
+  <p class="verified">Verified Oct 9, 2026</p>
+</section>
+<section aria-labelledby="what-h"><h2 id="what-h">What it is</h2><p>A free, MIT-licensed prompt, packaged as a skill, that makes your AI coding agent think like "the laziest senior dev in the room" (the repo's own description). Before writing anything it takes the simplest option that fully works: does this need to exist at all, is it already in the codebase, does the standard library or a native platform feature cover it, does an installed dependency solve it, and only then the minimum code. The README's example (v5): asked for a date picker, the agent reuses the repo's own Input with type date, 10 lines instead of 335 by hand. The README says it never cuts validation at trust boundaries, data-loss handling, security or accessibility.</p></section>
+<section aria-labelledby="setup-h"><h2 id="setup-h">Setup</h2><ol class="steps"><li><p>Claude Code, first prompt. Send it on its own:</p><div class="cmd"><code>/plugin marketplace add DietrichGebert/ponytail</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li><li><p>Second prompt, separately (the README says both must be sent as separate prompts):</p><div class="cmd"><code>/plugin install ponytail@ponytail</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li><li><p>In a new thread, check it. With no argument it reports the current level. The levels are lite, full (the default) and ultra; turn it off with <code>/ponytail off</code>.</p><div class="cmd"><code>/ponytail</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li><li><p>Codex: add the marketplace, then the plugin. Open <code>/hooks</code>, trust its hooks and start a new thread.</p><div class="cmd"><code>codex plugin marketplace add DietrichGebert/ponytail</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div><div class="cmd"><code>codex plugin add ponytail@ponytail</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li><li><p>Other agents: copy <code>AGENTS.md</code> into your project, or add the skills only. The repo's <code>INSTALL.md</code> has step-by-step instructions for each agent.</p><div class="cmd"><code>npx skills add DietrichGebert/ponytail</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li></ol></section>
+<section aria-labelledby="cheat-h"><h2 id="cheat-h">Cheat sheet</h2><ul class="cheat"><li><a class="inline" href="https://github.com/DietrichGebert/ponytail" rel="noopener">Repository and README</a> and the <a class="inline" href="https://github.com/DietrichGebert/ponytail/blob/main/INSTALL.md" rel="noopener">install guide</a>.</li><li>Install only from <code>DietrichGebert/ponytail</code> on GitHub or <code>@dietrichgebert/ponytail</code> on npm. The README says it never ships <code>.exe</code> or <code>.dll</code> files; a copy that does is not the author's.</li><li>The hooks need <code>node</code> on your PATH. Without it the skills still work, but each hook prints a harmless <code>node: command not found</code>.</li><li>Commands: <code>/ponytail-review</code> reviews your diff for bugs, security, load, missing tests and what to cut; <code>/ponytail-audit</code> does the same for the whole repo, most important first; <code>/ponytail-debt</code> collects the <code>shortcut:</code> comments you deferred.</li><li>Start on full. Lite names the smaller option and lets you pick; ultra also questions the request itself.</li><li>The numbers are the maker's. The older "about 54% less code" counts lines added in the git diff, comments included, across 12 tickets (from about 0% to 94% per task), on Haiku 4.5 and one repo, and its file says the safety check "is not a proof of security". The newer headline (-53% lines) covers 39 tasks on Opus 5.5 with 5 runs each. Both are on Claude Code only. Review the diff anyway.</li><li>If you do need the long version, ask for it and it will build it.</li><li>Uninstall: <code>/plugin remove ponytail</code> (Codex: <code>codex plugin remove ponytail</code>). A little state stays behind outside the plugin folder, such as <code>~/.claude/.ponytail-active</code> and <code>~/.config/ponytail/config.json</code>; the install guide's Uninstall section says how to clear it.</li><li>Not verified by Axo: either benchmark (we did not rerun them), and how it behaves on your setup.</li></ul></section>
+<section aria-labelledby="take-h"><h2 id="take-h">Axo&#39;s take</h2>
+<div class="dialog"><div class="dialog__axo"><img class="pixel" src="/assets/axo/axo_smug.png" width="64" height="77" alt="" aria-hidden="true"></div><div class="dialog__box"><span class="dialog__name">AXO</span><p>Haven't run it myself: this page comes from the maker's README and benchmark files. Try it if your agent keeps shipping a 400-line component where one native HTML tag would do. The headline saving is lines of code, and the maker also reports checks on correctness, but they are the maker's own, so keep reading the diff.</p></div></div></section>
+<section class="join" aria-labelledby="join-h">
+  <h2 id="join-h">Get every link first</h2>
+  <p>Follow me for the next drop. Axo&#39;s Den, my broadcast channel, opens soon. Free. No spam. I&#39;m an axolotl, I don&#39;t have the energy.</p>
+  <div class="btns"><a class="btn btn--den" href="https://www.instagram.com/axo.tries/" rel="noopener">Follow @axo.tries</a></div>
+</section>
+</main>
+<footer>
+  <a class="back" href="/">&larr; All links</a>
+  <p class="fine">Axo is an AI character. Links verified on Oct 9, 2026. Product names belong to their owners; no affiliation.</p>
+</footer>
+</div>
+<script src="/assets/vault.js?v=97cd17d3" defer></script>
+<script data-goatcounter="https://axotries.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

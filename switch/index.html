@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>magpie · TRY IT · Axo Vault</title>
+<meta name="description" content="A free tray app that lists every coding agent on your machine and lets you pick each one&#x27;s model from one screen. Setup, cheat sheet and Axo&#x27;s verdict: try it.">
+<meta name="theme-color" content="#2B1E16">
+<link rel="canonical" href="https://axotries.github.io/switch/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Axo Vault">
+<meta property="og:title" content="magpie: try it">
+<meta property="og:description" content="A free tray app that lists every coding agent on your machine and lets you pick each one&#x27;s model from one screen. Setup, cheat sheet and Axo&#x27;s verdict: try it.">
+<meta property="og:url" content="https://axotries.github.io/switch/">
+<meta property="og:image" content="https://axotries.github.io/assets/og/switch.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Axo&#x27;s verdict on magpie: TRY IT">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/press-start-2p-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/vt323-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/style.css?v=97cd17d3">
+</head>
+<body class="resource">
+<div class="wrap">
+<header class="tv">
+  <div class="tv__wood"><div class="tv__plate">AXO-VISION · SWITCH</div></div>
+  <div class="tv__screen">
+    <div class="tv__picture">
+      <div class="sun" aria-hidden="true"></div><div class="ground" aria-hidden="true"></div>
+      <h1 class="tv__title">magpie</h1>
+      <p class="tv__sub">A free tray app that lists every coding agent on your machine and lets you pick each one&#x27;s model from one screen.</p>
+      <div class="tv__stage">
+        <div class="axo"><img class="pixel" src="/assets/axo/axo_typing.png" width="64" height="77" alt="Axo, a pixel-art axolotl in an orange turtleneck, typing on a keyboard"></div>
+        <div class="stamp" aria-label="TRY IT">TRY IT</div>
+      </div>
+    </div>
+  </div>
+  <div class="tv__controls" aria-hidden="true"><div class="grille"></div><div class="knob"></div><div class="knob"></div><div class="chan">CH 14</div></div>
+</header>
+<main>
+<section class="get" aria-label="Get it">
+  <a class="btn btn--main" href="https://github.com/yetone/magpie" rel="noopener">Open on GitHub <span aria-hidden="true">&#8599;</span></a>
+  <p class="url">github.com/yetone/magpie</p>
+  <ul class="facts"><li><strong>7K+ GitHub stars (7,245 on 2026-10-09 UTC), MIT license, Go, created 2026-09-23</strong></li><li><strong>The README: 45+ agents in one list (its stat line; the list itself has 49 names and the reference table 46 rows), with each agent's model switchable from the menu bar or tray</strong></li><li><strong>It changes only the key it needs in each agent's own config file; comments, ordering and formatting stay, per the README</strong></li><li><strong>A local gateway on 127.0.0.1:3425 translates between OpenAI, Anthropic and Gemini formats, so it has to be running for a model that goes through magpie</strong></li><li><strong>Windows build: magpie-windows-amd64.exe, about 47 MB (47,070,720 bytes in v0.1.1138), not code-signed yet (SmartScreen may warn); API keys are stored in ~/.config/magpie/providers.json</strong></li></ul>
+  <p class="verified">Verified Oct 9, 2026</p>
+</section>
+<section aria-labelledby="what-h"><h2 id="what-h">What it is</h2><p>A free, MIT-licensed app (Go, with a tray panel on macOS, Windows and Linux, plus a window, a terminal UI and a CLI) that shows each AI coding agent installed on your machine and the model it is set to. Click a value, pick a model: Claude Code on Kimi, Codex on DeepSeek, Gemini CLI on GLM, per the README. To do it, it edits each agent's own config file (only the keys it needs) and runs a local gateway that translates between the OpenAI, Anthropic and Gemini formats. It also has profiles, quota failover between models and a usage view. The Claude, ChatGPT, Copilot, Gemini or Grok subscriptions you already have can act as providers too, as the README describes (the providers' terms on that were not checked). The maker lists sponsors first in the add-provider sheet, and the tool itself stays free and open source.</p></section>
+<section aria-labelledby="setup-h"><h2 id="setup-h">Setup</h2><ol class="steps"><li><p>Back up first. magpie edits your agents' config files, so copy <code>~/.claude/settings.json</code> and <code>~/.codex/config.toml</code> somewhere safe (on Windows: <code>%USERPROFILE%\.claude\settings.json</code> and <code>%USERPROFILE%\.codex\config.toml</code>). This is Axo's tip, not magpie's.</p></li><li><p>Install. On macOS or Linux:</p><div class="cmd"><code>curl -fsSL https://usemagpie.ai/install.sh | sh</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li><li><p>On Windows there is no one-line install: download <code>magpie-windows-amd64.exe</code> (about 47 MB, 44.9 MiB as Windows shows it; ARM: <code>magpie-windows-arm64.exe</code>, about 43 MB) from the maker's site or the releases page. The Windows build is not signed yet, so SmartScreen may ask before the first run.</p><div class="cmd"><code>https://github.com/yetone/magpie-releases/releases/latest</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li><li><p>Add a provider with your own key (use a test key with a spend limit), in the app under Providers or in a terminal:</p><div class="cmd"><code>magpie provider add deepseek sk-…</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li><li><p>Pick each agent's model: click it in the Agents tab, or in a terminal. Open a new agent session afterwards (for Codex, restart the Codex app too); sessions already open keep the model they started with.</p><div class="cmd"><code>magpie claude deepseek/deepseek-v4-pro</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li><li><p>Keep magpie running (in the tray) while you use a model that goes through it. To undo it for one agent (it removes what it wrote and restores what it replaced):</p><div class="cmd"><code>magpie claude default</code><button class="copy" type="button" aria-label="Copy command">Copy</button></div></li></ol></section>
+<section aria-labelledby="cheat-h"><h2 id="cheat-h">Cheat sheet</h2><ul class="cheat"><li><a class="inline" href="https://github.com/yetone/magpie" rel="noopener">Repository and README</a> and the <a class="inline" href="https://usemagpie.ai/docs/start" rel="noopener">maker's start guide</a>.</li><li>Useful if you run two or more coding agents and want to change models from one place, or you hit a quota in the afternoon. A routing group moves to the next account or model when one runs out, and the agent never sees the error, per the README (the reference adds: as long as no part of the reply has been sent).</li><li>Profiles snapshot every agent's setup under a name: <code>magpie save work</code>, then <code>magpie use work</code>.</li><li>See tokens, cost at list price and quota: <code>magpie usage 7d</code> and <code>magpie quota</code>.</li><li>Your agents' config files change and the keys you add live in <code>~/.config/magpie/providers.json</code>, set to owner-only (0600) per the maker's docs; on Windows Axo did not check what that means. The file is not encrypted (only the <code>magpie backup</code> export is), and in portable mode it lives in a <code>data</code> folder next to the .exe. Back up and use keys with spend limits.</li><li>Windows: the .exe is about 47 MB and unsigned, and there are open issues, including Windows 11 Smart App Control blocking a new build (issue #894, still open). Since v0.1.1013 the updater test-launches a new build and rolls back if it is blocked, but one you double-click yourself is still refused; the maker says signing is under evaluation.</li><li>The tool is free, but each provider bills your own key. It is a young project (created 2026-09-23, version 0.1.x), so do not treat it as production-ready.</li><li>Telemetry: once a day magpie sends a random id, its version, your system and which agents, providers and models you use (magpie's own ids; a provider you add yourself shows as "custom"), plus counts for sponsor listings in the add sheet. No keys, URLs, accounts, prompts or usage. Turn it off in Settings → Privacy or with <code>DO_NOT_TRACK=1</code>.</li><li>Skip it if you use a single agent with its own login and never change models.</li><li>Not verified by Axo: how it runs on Windows, and whether it keeps its own backup copies of your agents' files.</li></ul></section>
+<section aria-labelledby="take-h"><h2 id="take-h">Axo&#39;s take</h2>
+<div class="dialog"><div class="dialog__axo"><img class="pixel" src="/assets/axo/axo_smug.png" width="64" height="77" alt="" aria-hidden="true"></div><div class="dialog__box"><span class="dialog__name">AXO</span><p>Haven't run it myself: this page comes from the project's README and docs. Try it if you juggle more than one coding agent and are tired of editing config files to change models. It rewrites those files and stores your keys in a JSON, so back up first.</p></div></div></section>
+<section class="join" aria-labelledby="join-h">
+  <h2 id="join-h">Get every link first</h2>
+  <p>Follow me for the next drop. Axo&#39;s Den, my broadcast channel, opens soon. Free. No spam. I&#39;m an axolotl, I don&#39;t have the energy.</p>
+  <div class="btns"><a class="btn btn--den" href="https://www.instagram.com/axo.tries/" rel="noopener">Follow @axo.tries</a></div>
+</section>
+</main>
+<footer>
+  <a class="back" href="/">&larr; All links</a>
+  <p class="fine">Axo is an AI character. Links verified on Oct 9, 2026. Product names belong to their owners; no affiliation.</p>
+</footer>
+</div>
+<script src="/assets/vault.js?v=97cd17d3" defer></script>
+<script data-goatcounter="https://axotries.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://axotries.github.io/</loc></url>
+  <url><loc>https://axotries.github.io/qwen/</loc></url>
+  <url><loc>https://axotries.github.io/powerup/</loc></url>
+  <url><loc>https://axotries.github.io/montage/</loc></url>
+  <url><loc>https://axotries.github.io/switch/</loc></url>
+  <url><loc>https://axotries.github.io/lazy/</loc></url>
   <url><loc>https://axotries.github.io/boss/</loc></url>
   <url><loc>https://axotries.github.io/voice/</loc></url>
   <url><loc>https://axotries.github.io/cad/</loc></url>
